@@ -22,6 +22,7 @@
 		D2AD1AD318095246008CF0CE /* MotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1AD218095246008CF0CE /* MotionTests.m */; };
 		D2AD1AE0180957F5008CF0CE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AD1ADF180957F5008CF0CE /* CoreMotion.framework */; };
 		D2AD1AE318097751008CF0CE /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1AE218097751008CF0CE /* TopViewController.m */; };
+		D2AD1AE9180985CF008CF0CE /* MotionService.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1AE8180985CF008CF0CE /* MotionService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		D2AD1ADF180957F5008CF0CE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		D2AD1AE118097751008CF0CE /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
 		D2AD1AE218097751008CF0CE /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
+		D2AD1AE7180985CF008CF0CE /* MotionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionService.h; sourceTree = "<group>"; };
+		D2AD1AE8180985CF008CF0CE /* MotionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				D2AD1AB618095246008CF0CE /* Main.storyboard */,
 				D2AD1AE118097751008CF0CE /* TopViewController.h */,
 				D2AD1AE218097751008CF0CE /* TopViewController.m */,
+				D2AD1AE7180985CF008CF0CE /* MotionService.h */,
+				D2AD1AE8180985CF008CF0CE /* MotionService.m */,
 				D2AD1ABF18095246008CF0CE /* Images.xcassets */,
 				D2AD1AAB18095246008CF0CE /* Supporting Files */,
 			);
@@ -254,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2AD1AE318097751008CF0CE /* TopViewController.m in Sources */,
+				D2AD1AE9180985CF008CF0CE /* MotionService.m in Sources */,
 				D2AD1AB518095246008CF0CE /* AppDelegate.m in Sources */,
 				D2AD1AB118095246008CF0CE /* main.m in Sources */,
 			);
@@ -464,6 +470,7 @@
 				D2AD1AD818095246008CF0CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2AD1AD918095246008CF0CE /* Build configuration list for PBXNativeTarget "MotionTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +479,7 @@
 				D2AD1ADB18095246008CF0CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

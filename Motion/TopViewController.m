@@ -7,6 +7,7 @@
 //
 
 #import "TopViewController.h"
+#import "MotionService.h"
 @import CoreMotion;
 
 @interface TopViewController ()
@@ -29,6 +30,7 @@
 {
     LOG_METHOD;
     [super viewDidLoad];
+    [MotionService sharedInstance].delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -46,6 +48,7 @@
                                               }];
     }
     // CMMotionActivityManager
+    /*
     if ([CMMotionActivityManager isActivityAvailable]) {
         self.activityManager = [[CMMotionActivityManager alloc] init];
         [self.activityManager startActivityUpdatesToQueue:[NSOperationQueue mainQueue]
@@ -54,6 +57,8 @@
                                                   weakSelf.confidenceLabel.text = [weakSelf stringFromConfidence:activity.confidence];
                                               }];
     }
+    */
+    [[MotionService sharedInstance] start:self];
     
     if(![CMMotionActivityManager isActivityAvailable] || ![CMStepCounter isStepCountingAvailable]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注意"
@@ -77,47 +82,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - MotionActivity
-- (NSString *)statusOfActivity:(CMMotionActivity*)activity{
+-(void)motionStatusDidChange:(NSString *)status
+{
     LOG_METHOD;
-    NSMutableString *status = @"".mutableCopy;
-    if (activity.stationary) {
-        [status appendString:@"静止"];
-    }
-    
-    if (activity.walking) {
-        if (status.length) [status appendString:@", "];
-        [status appendString:@"徒歩"];
-    }
-    
-    if (activity.running) {
-        if (status.length) [status appendString:@", "];
-        [status appendString:@"走る"];
-    }
-    
-    if (activity.automotive) {
-        if (status.length) [status appendString:@" ,"];
-        [status appendString:@"高速移動中"];
-    }
-    
-    if (activity.unknown || !status.length) {
-        [status appendString:@"不明"];
-    }
-    return status;
+    self.statusLabel.text = status;
 }
 
-- (NSString *)stringFromConfidence:(CMMotionActivityConfidence)confidence {
+-(void)motionConfidenceDidChange:(NSString *)confidence
+{
     LOG_METHOD;
-    switch (confidence) {
-        case CMMotionActivityConfidenceLow:
-            return @"低";
-        case CMMotionActivityConfidenceMedium:
-            return @"中";
-        case CMMotionActivityConfidenceHigh:
-            return @"高";
-        default:
-            return nil;
-    }
+    self.confidenceLabel.text = confidence;
 }
+
 
 @end

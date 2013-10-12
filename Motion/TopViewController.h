@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface TopViewController : UIViewController
+#import "MotionService.h"
+@interface TopViewController : UIViewController<MotionServiceDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *stepLabel;
 @property (weak, nonatomic) IBOutlet UILabel *confidenceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
