@@ -51,6 +51,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - MotionServiceDelegate
 -(void)motionStatusDidChange:(NSString *)status
 {
     LOG_METHOD;
