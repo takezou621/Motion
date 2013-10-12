@@ -36,7 +36,7 @@
     LOG_METHOD;
     __weak typeof (self) weakSelf = self;
     
-    // 歩数計
+    // CMStepCounter
     if ([CMStepCounter isStepCountingAvailable]) {
         self.stepCounter = [[CMStepCounter alloc] init];
         [self.stepCounter startStepCountingUpdatesToQueue:[NSOperationQueue mainQueue]
@@ -44,15 +44,8 @@
                                               withHandler:^(NSInteger numberOfSteps, NSDate *timestamp, NSError *error){
                                                   weakSelf.stepLabel.text = [@(numberOfSteps) stringValue];
                                               }];
-    }else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注意"
-                                                        message:@"この端末は非対応です"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
     }
-    
-    // モーションセンサー
+    // CMMotionActivityManager
     if ([CMMotionActivityManager isActivityAvailable]) {
         self.activityManager = [[CMMotionActivityManager alloc] init];
         [self.activityManager startActivityUpdatesToQueue:[NSOperationQueue mainQueue]
@@ -61,6 +54,15 @@
                                                   weakSelf.confidenceLabel.text = [weakSelf stringFromConfidence:activity.confidence];
                                               }];
     }
+    
+    if(![CMMotionActivityManager isActivityAvailable] || ![CMStepCounter isStepCountingAvailable]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注意"
+                                                        message:@"この端末は非対応です"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
