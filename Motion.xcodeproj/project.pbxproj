@@ -14,7 +14,6 @@
 		D2AD1AB118095246008CF0CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1AB018095246008CF0CE /* main.m */; };
 		D2AD1AB518095246008CF0CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1AB418095246008CF0CE /* AppDelegate.m */; };
 		D2AD1AB818095246008CF0CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AD1AB618095246008CF0CE /* Main.storyboard */; };
-		D2AD1ABB18095246008CF0CE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1ABA18095246008CF0CE /* MainViewController.m */; };
 		D2AD1ABE18095246008CF0CE /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1ABD18095246008CF0CE /* FlipsideViewController.m */; };
 		D2AD1AC018095246008CF0CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AD1ABF18095246008CF0CE /* Images.xcassets */; };
 		D2AD1AC718095246008CF0CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AD1AC618095246008CF0CE /* XCTest.framework */; };
@@ -22,6 +21,8 @@
 		D2AD1AC918095246008CF0CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AD1AA818095246008CF0CE /* UIKit.framework */; };
 		D2AD1AD118095246008CF0CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2AD1ACF18095246008CF0CE /* InfoPlist.strings */; };
 		D2AD1AD318095246008CF0CE /* MotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1AD218095246008CF0CE /* MotionTests.m */; };
+		D2AD1AE0180957F5008CF0CE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AD1ADF180957F5008CF0CE /* CoreMotion.framework */; };
+		D2AD1AE318097751008CF0CE /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1AE218097751008CF0CE /* TopViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,6 @@
 		D2AD1AB318095246008CF0CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D2AD1AB418095246008CF0CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D2AD1AB718095246008CF0CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D2AD1AB918095246008CF0CE /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		D2AD1ABA18095246008CF0CE /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D2AD1ABC18095246008CF0CE /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		D2AD1ABD18095246008CF0CE /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		D2AD1ABF18095246008CF0CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -56,6 +55,9 @@
 		D2AD1ACE18095246008CF0CE /* MotionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MotionTests-Info.plist"; sourceTree = "<group>"; };
 		D2AD1AD018095246008CF0CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D2AD1AD218095246008CF0CE /* MotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionTests.m; sourceTree = "<group>"; };
+		D2AD1ADF180957F5008CF0CE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		D2AD1AE118097751008CF0CE /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
+		D2AD1AE218097751008CF0CE /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AD1AE0180957F5008CF0CE /* CoreMotion.framework in Frameworks */,
 				D2AD1AA718095246008CF0CE /* CoreGraphics.framework in Frameworks */,
 				D2AD1AA918095246008CF0CE /* UIKit.framework in Frameworks */,
 				D2AD1AA518095246008CF0CE /* Foundation.framework in Frameworks */,
@@ -104,6 +107,7 @@
 		D2AD1AA318095246008CF0CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2AD1ADF180957F5008CF0CE /* CoreMotion.framework */,
 				D2AD1AA418095246008CF0CE /* Foundation.framework */,
 				D2AD1AA618095246008CF0CE /* CoreGraphics.framework */,
 				D2AD1AA818095246008CF0CE /* UIKit.framework */,
@@ -118,8 +122,8 @@
 				D2AD1AB318095246008CF0CE /* AppDelegate.h */,
 				D2AD1AB418095246008CF0CE /* AppDelegate.m */,
 				D2AD1AB618095246008CF0CE /* Main.storyboard */,
-				D2AD1AB918095246008CF0CE /* MainViewController.h */,
-				D2AD1ABA18095246008CF0CE /* MainViewController.m */,
+				D2AD1AE118097751008CF0CE /* TopViewController.h */,
+				D2AD1AE218097751008CF0CE /* TopViewController.m */,
 				D2AD1ABC18095246008CF0CE /* FlipsideViewController.h */,
 				D2AD1ABD18095246008CF0CE /* FlipsideViewController.m */,
 				D2AD1ABF18095246008CF0CE /* Images.xcassets */,
@@ -254,8 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AD1AE318097751008CF0CE /* TopViewController.m in Sources */,
 				D2AD1AB518095246008CF0CE /* AppDelegate.m in Sources */,
-				D2AD1ABB18095246008CF0CE /* MainViewController.m in Sources */,
 				D2AD1ABE18095246008CF0CE /* FlipsideViewController.m in Sources */,
 				D2AD1AB118095246008CF0CE /* main.m in Sources */,
 			);
