@@ -14,7 +14,6 @@
 		D2AD1AB118095246008CF0CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1AB018095246008CF0CE /* main.m */; };
 		D2AD1AB518095246008CF0CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1AB418095246008CF0CE /* AppDelegate.m */; };
 		D2AD1AB818095246008CF0CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AD1AB618095246008CF0CE /* Main.storyboard */; };
-		D2AD1ABE18095246008CF0CE /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AD1ABD18095246008CF0CE /* FlipsideViewController.m */; };
 		D2AD1AC018095246008CF0CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AD1ABF18095246008CF0CE /* Images.xcassets */; };
 		D2AD1AC718095246008CF0CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AD1AC618095246008CF0CE /* XCTest.framework */; };
 		D2AD1AC818095246008CF0CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AD1AA418095246008CF0CE /* Foundation.framework */; };
@@ -47,8 +46,6 @@
 		D2AD1AB318095246008CF0CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D2AD1AB418095246008CF0CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D2AD1AB718095246008CF0CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D2AD1ABC18095246008CF0CE /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
-		D2AD1ABD18095246008CF0CE /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		D2AD1ABF18095246008CF0CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D2AD1AC518095246008CF0CE /* MotionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AD1AC618095246008CF0CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -124,8 +121,6 @@
 				D2AD1AB618095246008CF0CE /* Main.storyboard */,
 				D2AD1AE118097751008CF0CE /* TopViewController.h */,
 				D2AD1AE218097751008CF0CE /* TopViewController.m */,
-				D2AD1ABC18095246008CF0CE /* FlipsideViewController.h */,
-				D2AD1ABD18095246008CF0CE /* FlipsideViewController.m */,
 				D2AD1ABF18095246008CF0CE /* Images.xcassets */,
 				D2AD1AAB18095246008CF0CE /* Supporting Files */,
 			);
@@ -260,7 +255,6 @@
 			files = (
 				D2AD1AE318097751008CF0CE /* TopViewController.m in Sources */,
 				D2AD1AB518095246008CF0CE /* AppDelegate.m in Sources */,
-				D2AD1ABE18095246008CF0CE /* FlipsideViewController.m in Sources */,
 				D2AD1AB118095246008CF0CE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
