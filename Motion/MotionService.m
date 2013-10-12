@@ -10,6 +10,7 @@
 
 
 @implementation MotionService{
+    CMStepCounter *_stepCounter;
     CMMotionActivityManager *_motionManager;
 }
 
@@ -31,6 +32,7 @@
     }
     
     _motionManager = [[CMMotionActivityManager alloc] init];
+    _stepCounter = [[CMStepCounter alloc] init];
     
     return self;
 }
@@ -50,6 +52,22 @@
                                             [weakSelf.delegate motionStatusDidChange:[weakSelf statusOfActivity:activity]];
                                             [weakSelf.delegate motionConfidenceDidChange:[weakSelf stringFromConfidence:activity.confidence]];
                                         }];
+    }
+    
+    if ([CMStepCounter isStepCountingAvailable]) {
+        [_stepCounter startStepCountingUpdatesToQueue:[NSOperationQueue mainQueue]
+                                             updateOn:1
+                                          withHandler:^(NSInteger numberOfSteps, NSDate *timeStamp, NSError *error){
+                                              [weakSelf.delegate stepCountDidChange:[@(numberOfSteps) stringValue]];
+                                          }];
+    }
+    
+    if(![CMMotionActivityManager isActivityAvailable] || ![CMStepCounter isStepCountingAvailable]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注意"
+                                                        message:@"この端末は非対応です"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
 }
 

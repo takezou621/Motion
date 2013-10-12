@@ -12,6 +12,7 @@
 @protocol MotionServiceDelegate <NSObject>
 -(void)motionStatusDidChange:(NSString*)status;
 -(void)motionConfidenceDidChange:(NSString*)confidence;
+-(void)stepCountDidChange:(NSString*)stepCount;
 @end
 
 @interface MotionService : NSObject
@@ -20,8 +21,7 @@
 
 @property (nonatomic, strong) CMStepCounter *stepCounter;
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
-@property (nonatomic, strong) NSString *status;
-@property (nonatomic, strong) NSString *confidence;
+
 
 +(MotionService *)sharedInstance;
 - (void)start:(UIViewController*)vc;
